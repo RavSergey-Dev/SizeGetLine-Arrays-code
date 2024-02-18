@@ -1,0 +1,98 @@
+#include <iostream>
+#include <string>
+
+void main()
+
+{
+
+	std::string txt;
+	int i, Valor, ca = 0, ce = 0, ci = 0, co = 0, cu = 0;
+
+	do
+	{
+		std::cout << "---MENU---\n";
+
+		std::cout << "Escolhe a opcao\n";
+
+		std::cout << "1 - Contar Vogais.\n";
+
+		std::cout << "0 - Sair\n";
+
+		std::cin >> Valor;
+
+		switch (Valor)
+
+		{
+		case 1:
+		{
+
+			std::cout << "Escreve a frase";
+
+			std::cin.ignore();
+			getline(std::cin, txt);
+
+			for (i = 0; i < txt.size(); i++)
+			{
+				switch (txt[i])
+				{
+				case 'A':
+				case 'a':
+				{
+
+					ca = ca + 1;
+					break;
+
+				}
+				case 'E':
+				case 'e':
+				{
+
+					ce = ce + 1;
+					break;
+
+				}
+				case 'I':
+				case 'i':
+				{
+
+					ci = ci + 1;
+					break;
+
+				}
+				case 'O':
+				case 'o':
+				{
+
+					co = co + 1;
+					break;
+
+				}
+				case 'U':
+				case 'u':
+				{
+					cu = cu + 1;
+					break;
+
+				}
+				}
+			}
+			std::cout << "Escreveste " << ca << " a's nessa frase, e " << ce << " e's nessa frase, e " << ci << " i's nessa frase, e " << co << "o's nessa frase, e " << cu << " u's nessa frase.\n";
+
+			ca = 0;
+			ce = 0;
+			ci = 0;
+			co = 0;
+			cu = 0;
+			break;
+
+		}
+		case 0:
+			break;
+		default:
+			break;
+
+		}
+
+	}while (Valor != 0);
+
+}
